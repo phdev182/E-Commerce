@@ -1,8 +1,8 @@
-#E-commerce de camisetas e outros produtos ligados a Rock.
+# E-commerce de camisetas e outros produtos ligados a Rock.
 
 #### O intuito deste projeto é criar um E-commerce que possa servir futuramente de base para outros tipos de negócios.
 
-##Principais tecnologias utilizadas serão:
+## Principais tecnologias utilizadas serão:
 
 ### HTML5
 ### Css3
