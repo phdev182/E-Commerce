@@ -1,6 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+import data from './data';
+import { BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
+import HomeScreen from './Screens/HomeScreen';
+import ProductScreen from './Screens/ProductScreen';
 
 function App() {
 
@@ -11,6 +14,7 @@ function App() {
       document.querySelector(".sidebar").classList.remove("open");
     }
     return (
+  <BrowserRouter>
     <div className="grid-container">
       <header className="header">
         <div className="brand">
@@ -41,73 +45,23 @@ function App() {
       </aside>
       <main className="main">
         <div className="content">
+          <Route path="/product/:id" component={ProductScreen}/>
+          <Route path="/" exact={true} component={HomeScreen}/>
           <ul className="products">
-            <li>
-              <div className="product">
-                <img className="product-image" src="/images/acdc.jpg" alt="product 1"></img>
-                  <div className="product-name">
-                    <a href="product.html">AC/DC T-shirt</a>
-                  </div>
-                  <div className="product-brand">Volt</div>
-                  <div className="product-price">R$ 65,00</div>
-                  <div className="product-rating">4.5 Stars (50 Reviews)</div>
-              </div>
-            </li>
-              <li>
-                <div className="product">
-                  <img className="product-image" src="/images/gunsnroses.jpg" alt="product 2"></img>
-                    <div className="product-name">
-                      <a href="product.html">Gun´s T-shirt</a>
-                    </div>
-                    <div className="product-brand">Volt</div>
-                    <div className="product-price">R$ 65,00</div>
-                    <div className="product-rating">4.5 Stars (50 Reviews)</div>
-             </div>
-           </li>
+            {
+              data.products.map(product =>
                 <li>
-                  <div className="product">
-                    <img className="product-image" src="/images/ironMaiden.webp" alt="product 3"></img>
-                      <div className="product-name">
-                        <a href="product.html">Iron Maiden T-shirt</a>
-                      </div>
-                      <div className="product-brand">Volt</div>
-                      <div className="product-price">R$ 65,00</div>
-                      <div className="product-rating">4.5 Stars (50 Reviews)</div>
-             </div>
-           </li>
-                  <li>
-                    <div className="product">
-                      <img className="product-image" src="/images/metalica.jpg" alt="product 4"></img>
-                        <div className="product-name">
-                          <a href="product.html">Metalica T-shirt</a>
-                        </div>
-                        <div className="product-brand">Volt</div>
-                        <div className="product-price">R$ 65,00</div>
-                        <div className="product-rating">4.5 Stars (50 Reviews)</div>
-             </div>
-           </li>
-                    <li>
-                      <div className="product">
-                        <img className="product-image" src="/images/nirvana.jpg" alt="product 5"></img>
-                          <div className="product-name">
-                            <a href="product.html">Nirvana shirt</a>
-                          </div>
-                          <div className="product-brand">Volt</div>
-                          <div className="product-price">R$ 65,00</div>
-                          <div className="product-rating">4.5 Stars (50 Reviews)</div>
-             </div>
-           </li>
-                      <li>
-                        <div className="product">
-                          <img className="product-image" src="/images/offspring.jpg" alt="product 6"></img>
-                            <div className="product-name">
-                              <a href="product.html">Offspring shirt</a>
-                            </div>
-                            <div className="product-brand">Volt</div>
-                            <div className="product-price">R$ 65,00</div>
-                            <div className="product-rating">4.5 Stars (50 Reviews)</div>
-             </div>
-           </li>
+                <div className="product">
+                  <img className="product-image" src={product.image} alt="product 1"></img>
+                    <div className="product-name">
+                      <a href="product.html">{product.name}</a>
+                    </div>
+                    <div className="product-brand">{product.brand}</div>
+                    <div className="product-price">{product.price}</div>
+                    <div className="product-rating">{product.reting} Stars ({product.numReviews})</div>
+                </div>
+              </li>)
+            }
         </ul>
       </div>
     </main>
@@ -116,6 +70,7 @@ function App() {
       phdev
     </footer>
   </div>
+  </BrowserRouter>
   );
 }
 
