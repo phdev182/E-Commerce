@@ -2,6 +2,7 @@
 export default {
   products:[
     {
+    _id: '1',
     name: 'Ac/Dc',
     category: 'Shirts',
     image: '/images/camisetas/acdc.jpg',
@@ -11,6 +12,7 @@ export default {
     numReviews: 10
   },
   {
+    _id: '2',
     name: 'Metalica',
     category: 'Shirts',
     image: '/images/camisetas/metalica.jpg',
@@ -20,6 +22,7 @@ export default {
     numReviews: 10
   },
   {
+    _id: '3',
     name: 'Slipknot',
     category: 'Shirts',
     image: '/images/camisetas/slipknot.jpg',
@@ -29,6 +32,7 @@ export default {
     numReviews: 30
   },
   {
+    _id: '4',
     name: 'Red Hot',
     category: 'Shirts',
     image: '/images/camisetas/redhot.jpg',
@@ -38,6 +42,7 @@ export default {
     numReviews: 5
   },
   {
+    _id: '5',
     name: 'Beatles',
     category: 'quadros',
     image: '/images/quadros/beatles.jpg',
@@ -47,6 +52,7 @@ export default {
     numReviews: 8
   },
   {
+    _id: '6',
     name: 'Hendrix',
     category: 'quadros',
     image: '/images/quadros/hendrix.jpg',
@@ -56,6 +62,7 @@ export default {
     numReviews: 8
   },
   {
+    _id: '7',
     name: 'Pink Floyd',
     category: 'quadros',
     image: '/images/quadros/pinkfloyd.jpg',
