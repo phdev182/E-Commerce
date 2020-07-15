@@ -11,4 +11,4 @@
 ### NodeJs
 ### Mongo DB
 
-![E-Commerce](https://github.com/phdev182/E-Commerce/blob/master/template/images/Ecommerce.png)
+![E-Commerce](https://github.com/phdev182/E-Commerce/blob/master/frontend/public/images/Ecommerce.png)
